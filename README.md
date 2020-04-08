@@ -15,5 +15,7 @@ sh T-DNA_Insertion_Identify.sh  T-DNA.fa  genome.fa
 Then use IGV to see the sam and ref.fa files and identify T-DNA Insertion Loci.
 </br>
 
+![T-DNA_Insertion_Identify](T-DNA_Insertion_Identify.png)
+
 ## Contact information
 For any questions please contact xukai_li@sxau.edu.cn or xukai_li@qq.com </br>
