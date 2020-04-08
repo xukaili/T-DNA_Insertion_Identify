@@ -11,6 +11,7 @@ Put __`T-DNA_Insertion_Identify.sh`__ and all Fastq files and T-DNA.fa genome.fa
 ```sh
 sh T-DNA_Insertion_Identify.sh  T-DNA.fa  genome.fa
 ```
+Then use IGV to see the sam and ref.fa files and identify T-DNA Insertion Loci.
 </br>
 
 ## Contact information
