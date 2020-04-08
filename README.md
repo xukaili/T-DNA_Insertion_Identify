@@ -1,5 +1,6 @@
 # T-DNA_Insertion_Identify
 ## Identifying T-DNA insertion site(s) by whole-genome resequencing
+## 利用重测序技术鉴定 T-DNA 插入位点
 The availability of T-DNA insertion sites is very important for functional genomics research and the screening and identification of transgenic. However, the present protocols for identifying T-DNA insertion sites, like reverse PCR and semi-random primer PCR, are not only complex and time-consuming, but also inefficient. In this GitHub, __`T-DNA_Insertion_Identify.sh`__  established a simple, reliable and efficient method for obtaining T-DNA insertion sites in transgenic.</br></br>
 
 ## License
