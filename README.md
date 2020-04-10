@@ -14,7 +14,8 @@ sh T-DNA_Insertion_Identify.sh  T-DNA.fa  genome.fa
 ```
 And the results in CandiT-DNA.T-DNA.txt file are like this:
 ```
-Chr1	Start: 5251250	End: 5251267	Length: 17
+#Chr	  Breakpoint_Start    Breakpoint_End     Break_Length
+Chr1    Start: 5251250      End: 5251267       Length: 17
 ```
 
 Then use IGV to see the sam and ref.fa files and check T-DNA Insertion Loci.
