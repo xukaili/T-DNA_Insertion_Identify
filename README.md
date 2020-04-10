@@ -12,7 +12,7 @@ Put __`T-DNA_Insertion_Identify.sh`__ and all Fastq files and T-DNA.fa genome.fa
 ```sh
 sh T-DNA_Insertion_Identify.sh  T-DNA.fa  genome.fa
 ```
-And the results in CandiT-DNA.T-DNA.txt file are like this:
+And the results in __`CandiT-DNA.T-DNA.txt`__ file are like this:
 ```
 #Chr    Breakpoint_Start    Breakpoint_End     Break_Length
 Chr1    Start: 5251250      End: 5251267       Length: 17
