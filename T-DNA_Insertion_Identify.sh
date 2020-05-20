@@ -19,7 +19,7 @@ do
   cat ${i%%.sam}.cov.wig  | perl -e 'while(<>){print if $_ =~ /chrom/;$_ =~ s/\n*|\r*//g;@line = split(/\t/,$_);next if ($line[1]+$line[2]+$line[3]+$line[4]+$line[5]) < 5 ;print "$_\n";}' > ${i%%.sam}.IGV.txt
   perl -p -i -e '$/ = ""; s/\r*\n(\d+\t)/\t::\t$1/g; s/variab.*span=25\n//g; s/^\d+.*\n//g; s/\t::\t/\n/g;'  ${i%%.sam}.IGV.txt
   igvtools count -w 1 --bases $i  ${i%%.sam}.bases.cov.wig  ref.fa
-  cat ${i%%.sam}.bases.cov.wig  | perl -e 'while(<>){print if $_ =~ /chrom/;$_ =~ s/\n*|\r*//g;@line = split(/\t/,$_);$lxk=$line[1]+$line[2]+$line[3]+$line[4]+$line[5];next if ($lxk) < 5 ;print "$line[0]\t$lxk\n";}' > ${i%%.sam}.bases.IGV.txt
+  cat ${i%%.sam}.bases.cov.wig  | perl -e 'while(<>){print if $_ =~ /chrom/;$_ =~ s/\n*|\r*//g;@line = split(/\t/,$_);$lxk=$line[1]+$line[2]+$line[3]+$line[4]+$line[5];next if ($lxk) < 2 ;print "$line[0]\t$lxk\n";}' > ${i%%.sam}.bases.IGV.txt
   perl -p -i -e '$/ = ""; s/\r*\n(\d+\t)/\t::\t$1/g; s/variab.*span=1\n//g; s/^\d+.*\n//g;'   ${i%%.sam}.bases.IGV.txt
   perl -p -i -e '@a = split(/\t/,$_); for ($i = 2; $i <= $#a; $i = $i + 3){$lxk=$a[$i + 3] - $a[$i]; if ($lxk > 2 and $lxk < 10000) {$a[0]=~/chrom=(\S+)/;print "\nCandiT-DNA\t$1\tStart: $a[$i]\tEnd: $a[$i + 3]\tLength: $lxk\n";}};s/\t/ /g; s/ :: /\t/g;'  ${i%%.sam}.bases.IGV.txt
 done
